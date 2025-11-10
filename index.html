@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonny Halprin - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Jonny Halprin</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About me</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services</a>
+                    <div class="dropdown-content">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="startup.html">Startup Advisory</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">Leveling up is easier than you think.</h1>
+        </div>
+        <div class="scroll-arrow" onclick="scrollToNext('services')">
+            ⌄
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-row">
+                <a href="consulting.html" class="service-box-link">
+                    <div class="service-box">
+                        <div class="service-icon">→</div>
+                        <h3>Consulting</h3>
+                    </div>
+                </a>
+                <a href="startup.html" class="service-box-link">
+                    <div class="service-box">
+                        <div class="service-icon">→</div>
+                        <h3>Startup Advisory</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="hero-image">
+                    <img src="images/headshot.jpg.jpg" alt="Jonny Halprin" class="hero-photo">
+                </div>
+                <div class="about-text">
+                    <p style="font-style: italic;">Jonny grew up in Menlo Park, CA. After graduating in 2015 with a B.A. from UCLA as a double major in Economics and Philosophy, Jonny began his career in management consulting at The Boston Consulting Group (BCG). At <a href="https://www.bcg.com/" target="_blank">BCG</a>, Jonny worked on >10 cases covering a variety of verticals and business functions, and was promoted to the Post-MBA level, Consultant. After 3 years in consulting, Jonny then got an MA in Philosophy from Columbia University. While in graduate school, he worked as an independent consultant and case interview tutor and incubated the startup that would come to define his next chapter – Fanimal. Fanimal was a vertically integrated live events platform featuring both a consumer marketplace and a turnkey software suite for event organizers. As Co-Founder and CEO, Jonny raised nearly $10M of capital for Fanimal led by <a href="https://pear.vc/" target="_blank">Pear VC</a>, <a href="https://www.bullpencap.com/" target="_blank">Bullpen Capital</a> and <a href="https://burst.vc/" target="_blank">Burst VC</a>. After scaling to 13 FTEs, >250K users, >100 venue partners and $12M of annual sales, Fanimal was acquired by <a href="https://www.tickpick.com/" target="_blank">TickPick</a> in 2024. After leading the tech integration and initial go to market efforts that resulted in a quadrupling of baseline revenue as GM of Primary Ticketing, Jonny left TickPick in the fall of 2025.</p>
+                    <p style="font-style: italic;">Jonny is passionate about all things strategy, innovation, analysis and philosophy, and brings perspective from experiences spanning from startups to Fortune 500 companies.</p>
+                    <div class="about-buttons">
+                        <a href="https://www.linkedin.com/in/jonny-halprin-0a043846/" target="_blank" class="btn btn-primary">LinkedIn</a>
+                        <a href="Jonny Halprin_Resume_10_2025.pdf" target="_blank" class="btn btn-primary">CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgvyeqj" method="POST">
+                    <input type="hidden" name="_subject" value="Jonny Halprin Website Inquiry">
+                    
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Your Phone # <span class="optional">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select id="service" name="service" required>
+                            <option value=""></option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Startup Advisory">Startup Advisory</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell me how I can help.</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachment">Attach a file <span class="optional">(optional - pitch deck, resume, etc.)</span></label>
+                        <input type="file" id="attachment" name="attachment" accept=".pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.csv">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Jonny Halprin. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/jonny-halprin-0a043846/" class="social-link" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank you for your submission!</h2>
+            <p>Jonny will contact you shortly.</p>
+            <button onclick="closeModalAndRedirect()" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToNext(sectionId) {
+            const element = document.getElementById(sectionId);
+            const headerOffset = 70;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const fileInput = form.querySelector('input[type="file"]');
+            
+            // Check file size (10MB limit)
+            if (fileInput.files.length > 0) {
+                const fileSizeMB = fileInput.files[0].size / (1024 * 1024);
+                if (fileSizeMB > 10) {
+                    alert('File size must be under 10MB. Your file is ' + fileSizeMB.toFixed(1) + 'MB. Please upload a smaller file.');
+                    return;
+                }
+            }
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    form.reset();
+                    document.getElementById('successModal').style.display = 'flex';
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please try again.');
+            }
+        });
+        
+        function closeModalAndRedirect() {
+            document.getElementById('successModal').style.display = 'none';
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Services - Jonny Halprin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Jonny Halprin</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About me</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link active">Services</a>
+                    <div class="dropdown-content">
+                        <a href="consulting.html">Consulting</a>
+                        <a href="startup.html">Startup Advisory</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Consulting Services</h1>
+        </div>
+    </section>
+
+    <!-- Consulting Hero -->
+    <section class="consulting-hero">
+        <div class="hero-container">
+            <p class="consulting-intro-text">Enterprise quality insights for a fraction of the price.</p>
+        </div>
+        <div class="scroll-arrow" onclick="scrollToNext('services-boxes')">
+            ⌄
+        </div>
+    </section>
+
+    <!-- Consulting Services Grid -->
+    <section class="services-boxes-section" id="services-boxes">
+        <div class="container">
+            <h2 class="section-title">Engagements tailored to the needs of your business</h2>
+            <div class="consulting-services-grid">
+                <!-- Strategy -->
+                <div class="consulting-service-card">
+                    <div class="consulting-icon">→</div>
+                    <h2>Strategy</h2>
+                    <div class="service-tags">
+                        <span class="service-tag">Market research</span>
+                        <span class="service-tag">Competitive analysis</span>
+                        <span class="service-tag">Business plan creation</span>
+                        <span class="service-tag">Investor presentations</span>
+                        <span class="service-tag">Strategic growth</span>
+                        <span class="service-tag">Operations optimization</span>
+                        <span class="service-tag">Pricing</span>
+                        <span class="service-tag">Go-to-market strategy</span>
+                        <span class="service-tag">Capitalization strategy</span>
+                        <span class="service-tag">M&A support</span>
+                        <span class="service-tag">Due diligence support</span>
+                        <span class="service-tag">Organizational design</span>
+                        <span class="service-tag">Restructuring</span>
+                    </div>
+                </div>
+
+                <!-- Finance -->
+                <div class="consulting-service-card">
+                    <div class="consulting-icon">→</div>
+                    <h2>Finance</h2>
+                    <div class="service-tags">
+                        <span class="service-tag">Financial forecasting</span>
+                        <span class="service-tag">Budgeting</span>
+                        <span class="service-tag">Modeling</span>
+                        <span class="service-tag">Fractional CFO services</span>
+                        <span class="service-tag">Controller services</span>
+                        <span class="service-tag">Business valuation</span>
+                        <span class="service-tag">Investment analysis</span>
+                        <span class="service-tag">Expense analysis</span>
+                        <span class="service-tag">Cost reduction projects</span>
+                    </div>
+                </div>
+
+                <!-- Product/Tech -->
+                <div class="consulting-service-card">
+                    <div class="consulting-icon">→</div>
+                    <h2>Product/Tech</h2>
+                    <div class="service-tags">
+                        <span class="service-tag">Product management</span>
+                        <span class="service-tag">Product strategy</span>
+                        <span class="service-tag">UX/UI design consulting</span>
+                        <span class="service-tag">Data analysis</span>
+                        <span class="service-tag">Visualization</span>
+                        <span class="service-tag">Dashboard creation</span>
+                        <span class="service-tag">AI workflow design</span>
+                        <span class="service-tag">Automation workflow design</span>
+                    </div>
+                </div>
+
+                <!-- Growth -->
+                <div class="consulting-service-card">
+                    <div class="consulting-icon">→</div>
+                    <h2>Growth</h2>
+                    <div class="service-tags">
+                        <span class="service-tag">Brand strategy</span>
+                        <span class="service-tag">Positioning</span>
+                        <span class="service-tag">Marketing campaign planning</span>
+                        <span class="service-tag">Campaign execution</span>
+                        <span class="service-tag">SEO</span>
+                        <span class="service-tag">SEM</span>
+                        <span class="service-tag">Paid ads management</span>
+                        <span class="service-tag">Social media</span>
+                        <span class="service-tag">Content strategy</span>
+                        <span class="service-tag">Market research</span>
+                        <span class="service-tag">Customer research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgvyeqj" method="POST">
+                    <input type="hidden" name="_subject" value="Jonny Halprin Website Inquiry">
+                    
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Your Phone # <span class="optional">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select id="service" name="service" required>
+                            <option value=""></option>
+                            <option value="Consulting" selected>Consulting</option>
+                            <option value="Startup Advisory">Startup Advisory</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell me how I can help.</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachment">Attach a file <span class="optional">(optional - pitch deck, resume, etc.)</span></label>
+                        <input type="file" id="attachment" name="attachment" accept=".pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.csv">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Jonny Halprin. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/jonny-halprin-0a043846/" class="social-link" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank you for your submission!</h2>
+            <p>Jonny will contact you shortly.</p>
+            <button onclick="closeModalAndRedirect()" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToNext(sectionId) {
+            const element = document.getElementById(sectionId);
+            const headerOffset = 70;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const fileInput = form.querySelector('input[type="file"]');
+            
+            // Check file size (10MB limit)
+            if (fileInput.files.length > 0) {
+                const fileSizeMB = fileInput.files[0].size / (1024 * 1024);
+                if (fileSizeMB > 10) {
+                    alert('File size must be under 10MB. Your file is ' + fileSizeMB.toFixed(1) + 'MB. Please upload a smaller file.');
+                    return;
+                }
+            }
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    form.reset();
+                    document.getElementById('successModal').style.display = 'flex';
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please try again.');
+            }
+        });
+        
+        function closeModalAndRedirect() {
+            document.getElementById('successModal').style.display = 'none';
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
