@@ -39,7 +39,7 @@
         <div class="hero-container">
             <h1 class="hero-title">Leveling up is easier than you think.</h1>
         </div>
-        <div class="scroll-arrow" onclick="scrollToNext('services')">
+        <div class="scroll-arrow" role="button" aria-label="Scroll down">
             ⌄
         </div>
     </section>
@@ -157,17 +157,6 @@
 
     <script src="script.js"></script>
     <script>
-        function scrollToNext(sectionId) {
-            const element = document.getElementById(sectionId);
-            const headerOffset = 70;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
         
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -213,3 +202,4 @@
     </script>
 </body>
 </html>
+

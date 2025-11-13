@@ -1,4 +1,38 @@
 // Mobile Navigation Toggle
+const HEADER_OFFSET = 70;
+
+function getScrollStep() {
+    return Math.max(window.innerHeight * 0.85, 400);
+}
+
+function scrollArrowClickHandler() {
+    const currentScroll = window.pageYOffset;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (currentScroll >= maxScroll - 2) {
+        return;
+    }
+
+    let targetScroll;
+
+    if (window.innerWidth <= 768 && currentScroll < 60) {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            const aboutTop = aboutSection.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET - 10;
+            targetScroll = Math.min(aboutTop, maxScroll);
+        }
+    }
+
+    if (typeof targetScroll === 'undefined') {
+        targetScroll = Math.min(currentScroll + getScrollStep(), maxScroll);
+    }
+
+    window.scrollTo({
+        top: targetScroll,
+        behavior: 'smooth'
+    });
+}
+
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -56,6 +90,11 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
+    const scrollArrow = document.querySelector('.scroll-arrow');
+    if (scrollArrow) {
+        scrollArrow.addEventListener('click', scrollArrowClickHandler);
+    }
+
     const animatedElements = document.querySelectorAll('.about-content, .skills');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
@@ -64,3 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+
+
