@@ -16,10 +16,10 @@ function scrollArrowClickHandler() {
     let targetScroll;
 
     if (window.innerWidth <= 768 && currentScroll < 60) {
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-            const aboutTop = aboutSection.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET - 10;
-            targetScroll = Math.min(aboutTop, maxScroll);
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+            const servicesTop = servicesSection.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET - 4;
+            targetScroll = Math.min(servicesTop, maxScroll);
         }
     }
 
@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
 
 
 
